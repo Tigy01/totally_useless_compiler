@@ -117,19 +117,22 @@ int main(int argc, char* argv[])
     }
 
     auto tokens = tokenize(contents);
+
+    std::cout << "[ ";
     for (Token tok : tokens) {
         switch (tok.type) {
         case TokenType::_return:
-            std::printf("return\n");
+            std::printf("return, ");
             break;
         case TokenType::int_lit:
-            std::printf("%s\n", tok.value.value_or("").c_str());
+            std::printf("%s, ", tok.value.value_or("").c_str());
             break;
         case TokenType::new_line:
-            std::printf("newline\n");
+            std::printf("newline, ");
             break;
         }
     }
+    std::cout << "]" << std::endl;
 
     return EXIT_SUCCESS;
 }
