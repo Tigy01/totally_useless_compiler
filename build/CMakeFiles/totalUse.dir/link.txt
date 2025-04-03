@@ -1,0 +1,1 @@
+/home/fedora-g14/.nix-profile/bin/c++ CMakeFiles/totalUse.dir/src/main.cpp.o -o totalUse
